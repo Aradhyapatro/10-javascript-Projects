@@ -1,5 +1,5 @@
 // jshint esversion:6
-const newYear = "1 JAN 2022";
+const newYear = "27 SEPT 2021";
 const day = document.getElementById("day");
 const hour = document.getElementById("hour");
 const minutes = document.getElementById("minutes");
