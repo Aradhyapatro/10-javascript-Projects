@@ -5,7 +5,7 @@ const QuizQuestions = [{
         "b": "Mumbai",
         "c": "Chennai",
         "d": "Bhubaneswar",
-        "answer": "New Delhi"
+        "answer": "a"
     },
     {
         "question": "What is The most used language in ML",
@@ -13,7 +13,7 @@ const QuizQuestions = [{
         "b": "C",
         "c": "C++",
         "d": "Python",
-        "answer": "Python"
+        "answer": "d"
     },
     {
         "question": "What is The most used language in Web Dev",
@@ -21,15 +21,7 @@ const QuizQuestions = [{
         "b": "C",
         "c": "C++",
         "d": "Python",
-        "answer": "JavaScript"
-    },
-    {
-        "question": "Founder of kiit",
-        "a": "Honourable",
-        "b": "Chutya",
-        "c": "Achutya",
-        "d": "Achutya Samanta",
-        "answer": "Achutya Samanta"
+        "answer": "a"
     },
     {
         "question": "What is The most crowded branch in kiit",
@@ -37,7 +29,7 @@ const QuizQuestions = [{
         "b": "ETC",
         "c": "IT",
         "d": "Law",
-        "answer": "CSE"
+        "answer": "a"
     },
     {
         "question": "How can we describe an array in the best possible way",
@@ -45,7 +37,7 @@ const QuizQuestions = [{
         "b": "Arrays are immutable",
         "c": "Container that stores the elements of similar types",
         "d": "The Array is not a data structure",
-        "answer": "Container that stores the elements of similar types"
+        "answer": "c"
     },
     {
         "question": "Which one of the following is the process of inserting an element in the stack?",
@@ -53,7 +45,7 @@ const QuizQuestions = [{
         "b": "Add",
         "c": "Push",
         "d": "None of the above",
-        "answer": "push"
+        "answer": "c"
     },
     {
         "question": "When the user tries to delete the element from the empty stack then the condition is said to be a",
@@ -61,7 +53,7 @@ const QuizQuestions = [{
         "b": "Underflow",
         "c": "Garbage collection",
         "d": "None of the above",
-        "answer": "Underflow"
+        "answer": "b"
     },
     {
         "question": "Who is the national crush of india",
@@ -69,7 +61,7 @@ const QuizQuestions = [{
         "b": "Anupama",
         "c": "Kiara",
         "d": "Struggle",
-        "answer": "Rashmika"
+        "answer": "a"
     },
     {
         "question": "Which game is the GOAT",
@@ -77,7 +69,7 @@ const QuizQuestions = [{
         "b": "Mario",
         "c": "Mortal Kombat",
         "d": "Minecraft",
-        "answer": "GTA San andreas"
+        "answer": "a"
     },
     {
         "question": "Which one of the following is not the application of the stack data structure",
@@ -85,7 +77,7 @@ const QuizQuestions = [{
         "b": "Backtracking",
         "c": "Reversal",
         "d": "Recursion",
-        "answer": "Asynchronous data transfer"
+        "answer": "a"
     },
     {
         "question": "Which data structure is mainly used for implementing the recursive algorithm",
@@ -93,7 +85,7 @@ const QuizQuestions = [{
         "b": "Queue",
         "c": "Array",
         "d": "Tree",
-        "answer": "Stack"
+        "answer": "d"
     },
     {
         "question": "What is another name for the circular queue among the following options",
@@ -101,15 +93,24 @@ const QuizQuestions = [{
         "b": "Rectangular buffer",
         "c": "Ring buffer",
         "d": "None of the above",
-        "answer": "None of the above"
+        "answer": "d"
+    },
+    {
+        "question": "Founder of kiit",
+        "a": "Honourable Prime Minister",
+        "b": "Yogi Ji",
+        "c": "Amit Shahh",
+        "d": "Achutya Samanta",
+        "answer": "d"
     }
 ];
 
 let Question = document.getElementById("Question");
-let q1 = document.getElementById("a");
-let q2 = document.getElementById("b");
-let q3 = document.getElementById("c");
-let q4 = document.getElementById("d");
+let q1 = document.getElementById("aa");
+let q2 = document.getElementById("bb");
+let q3 = document.getElementById("cc");
+let q4 = document.getElementById("dd");
+let answerels = document.getElementsByClassName("answer");
 let submit = document.getElementById("Submit");
 let c = 0;
 
@@ -122,12 +123,43 @@ function putQuestions() {
     q3.innerHTML = currQ.c;
     q4.innerHTML = currQ.d;
 
+}
 
+function getSelected() {
+    let ans;
+    console.log(answerels[0]);
+    for (let i = 0; i < answerels.length; i++) {
+        const element = answerels[i];
+        if (element.checked) {
+            ans = element.id;
+        }
+    }
+    return ans;
+}
+
+function unCheck() {
+    for (let i = 0; i < answerels.length; i++) {
+        answerels[i].checked = false;
+    }
 }
 
 submit.addEventListener("click", function() {
-    c++;
-    putQuestions();
+    const data = getSelected();
+    console.log(c);
+    if (c != QuizQuestions.length - 1) {
+        if (data === QuizQuestions[c].answer) {
+            c++;
+            unCheck();
+            putQuestions();
+        } else {
+            alert("Wrong Answer");
+            location.reload();
+        }
+    } else {
+
+        alert("Congratulations you have Won the Quiz,Now please i beg you close the browser");
+
+    }
 });
 
 putQuestions();
