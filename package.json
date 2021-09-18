@@ -1,0 +1,23 @@
+{
+  "name": "10-javascript-projects",
+  "version": "1.0.0",
+  "description": "10 JavaScript Projects",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aradhyapatro/10-javascript-Projects.git"
+  },
+  "author": "Aradhya Patro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aradhyapatro/10-javascript-Projects/issues"
+  },
+  "homepage": "https://github.com/Aradhyapatro/10-javascript-Projects#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
