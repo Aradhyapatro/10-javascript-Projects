@@ -1,11 +1,10 @@
-// jshint esversion:6
 const QuizQuestions = [{
         "question": "What is india's capital",
         "a": "New Delhi",
         "b": "Mumbai",
         "c": "Chennai",
         "d": "Bhubaneswar",
-        "answer": "a"
+        "answer": "New Delhi"
     },
     {
         "question": "What is The most used language in ML",
@@ -13,7 +12,7 @@ const QuizQuestions = [{
         "b": "C",
         "c": "C++",
         "d": "Python",
-        "answer": "d"
+        "answer": "Python"
     },
     {
         "question": "What is The most used language in Web Dev",
@@ -21,7 +20,15 @@ const QuizQuestions = [{
         "b": "C",
         "c": "C++",
         "d": "Python",
-        "answer": "a"
+        "answer": "JavaScript"
+    },
+    {
+        "question": "Founder of kiit",
+        "a": "Honourable",
+        "b": "Chutya",
+        "c": "Achutya",
+        "d": "Achutya Samanta",
+        "answer": "Achutya Samanta"
     },
     {
         "question": "What is The most crowded branch in kiit",
@@ -29,7 +36,7 @@ const QuizQuestions = [{
         "b": "ETC",
         "c": "IT",
         "d": "Law",
-        "answer": "a"
+        "answer": "CSE"
     },
     {
         "question": "How can we describe an array in the best possible way",
@@ -37,7 +44,7 @@ const QuizQuestions = [{
         "b": "Arrays are immutable",
         "c": "Container that stores the elements of similar types",
         "d": "The Array is not a data structure",
-        "answer": "c"
+        "answer": "Container that stores the elements of similar types"
     },
     {
         "question": "Which one of the following is the process of inserting an element in the stack?",
@@ -45,7 +52,7 @@ const QuizQuestions = [{
         "b": "Add",
         "c": "Push",
         "d": "None of the above",
-        "answer": "c"
+        "answer": "push"
     },
     {
         "question": "When the user tries to delete the element from the empty stack then the condition is said to be a",
@@ -53,7 +60,7 @@ const QuizQuestions = [{
         "b": "Underflow",
         "c": "Garbage collection",
         "d": "None of the above",
-        "answer": "b"
+        "answer": "Underflow"
     },
     {
         "question": "Who is the national crush of india",
@@ -61,7 +68,7 @@ const QuizQuestions = [{
         "b": "Anupama",
         "c": "Kiara",
         "d": "Struggle",
-        "answer": "a"
+        "answer": "Rashmika"
     },
     {
         "question": "Which game is the GOAT",
@@ -69,7 +76,7 @@ const QuizQuestions = [{
         "b": "Mario",
         "c": "Mortal Kombat",
         "d": "Minecraft",
-        "answer": "a"
+        "answer": "GTA San andreas"
     },
     {
         "question": "Which one of the following is not the application of the stack data structure",
@@ -77,7 +84,7 @@ const QuizQuestions = [{
         "b": "Backtracking",
         "c": "Reversal",
         "d": "Recursion",
-        "answer": "a"
+        "answer": "Asynchronous data transfer"
     },
     {
         "question": "Which data structure is mainly used for implementing the recursive algorithm",
@@ -85,7 +92,7 @@ const QuizQuestions = [{
         "b": "Queue",
         "c": "Array",
         "d": "Tree",
-        "answer": "d"
+        "answer": "Stack"
     },
     {
         "question": "What is another name for the circular queue among the following options",
@@ -93,15 +100,7 @@ const QuizQuestions = [{
         "b": "Rectangular buffer",
         "c": "Ring buffer",
         "d": "None of the above",
-        "answer": "d"
-    },
-    {
-        "question": "Founder of kiit",
-        "a": "Honourable Prime Minister",
-        "b": "Yogi Ji",
-        "c": "Amit Shahh",
-        "d": "Achutya Samanta",
-        "answer": "d"
+        "answer": "None of the above"
     }
 ];
 

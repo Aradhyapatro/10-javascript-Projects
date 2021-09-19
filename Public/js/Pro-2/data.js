@@ -1,4 +1,4 @@
-[{
+const Qdata = [{
         "question": "What is india's capital",
         "a": "New Delhi",
         "b": "Mumbai",
@@ -102,4 +102,6 @@
         "d": "None of the above",
         "answer": "None of the above"
     }
-]
+];
+
+module.exports = Qdata;
